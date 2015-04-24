@@ -51,6 +51,12 @@ motivation.html : motivation.md _layouts/slides.revealjs Makefile
 	    --template=_layouts/slides \
 	    -o $@ $<
 
+workshop-slides.html : workshop-slides.md _layouts/slides.revealjs Makefile
+	${PANDOC} -s -t revealjs --slide-level 2 \
+	    ${PANDOC_FLAGS} \
+	    --template=_layouts/slides \
+	    -o $@ $<
+
 # Pattern to build a generic page.
 %.html : %.md _layouts/page.html $(FILTERS)
 	${PANDOC} -s -t html \

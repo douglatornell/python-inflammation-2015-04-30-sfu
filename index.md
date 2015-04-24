@@ -38,6 +38,8 @@ and to use that language *well*.
     3.  [Analyzing Multiple Data Sets](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb)
     4.  [Making Choices](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/04-cond.ipynb)
 
+* [Workshop Slides](workshop-slides.html)
+
 
 ## Resources
 

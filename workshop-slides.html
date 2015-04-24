@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Building Programs with Python</title>
+
+
+  <script src="js/deckjs-custom.js"></script>
+  <script>
+      // TODO: finer filter on what is needed (vs profile-5)
+      includedeck("css/swc-slides.css", {
+         BEFOREINIT: function() {
+            $(".slide.auto li:not(li li):not(.notslide)").addClass("slide");
+         }
+      });
+  </script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <div class="slide title-slide" data-container-class="no-status">
+        <h1 class="var-title"></h1>
+        <img class="logo" src="img/software-carpentry-banner.png" alt="Software Carpentry"/>
+    </div>
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+<section id="introduction" class="slide level2">
+<h1>Introduction</h1>
+<p>For our Python introduction we’re going to pretend to be a researcher named Harold Bridge <code>hbridge</code> who is studying inflammation in patients who have been given a new treatment for arthritis.</p>
+<p>The data we’ll analyze is in the <code>python-inflammation/</code> directory of the data zip-file or you can download it from:</p>
+<p><a href="https://bitbucket.org/douglatornell/swc-hbridge-files/downloads">https://bitbucket.org/douglatornell/swc-hbridge-files/downloads</a></p>
+</section>
+<section id="launching-ipython-notebook---1" class="slide level2">
+<h1>Launching IPython Notebook - 1</h1>
+<p>There are several ways that we can use Python. We’re going to start with a tool called IPython Notebook (aka Jupyter) that runs in the browser.</p>
+<p>In a shell window enter these commands:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">cd</span> python-inflammation
+$ <span class="kw">ipython</span> notebook</code></pre>
+</section>
+<section id="launching-ipython-notebook---2" class="slide level2">
+<h1>Launching IPython Notebook - 2</h1>
+<p>That shell window is now running a local web server for you. Don’t close it. You will need to open another shell window to do other command-line things.</p>
+<p>Your browser should open to an <code>jupyter</code> page showing a list of <code>inflamation-*.csv</code> files. If it doesn’t, Open a new tab and enter the address <code>127.0.0.1:8888</code>.</p>
+</section>
+<section id="analyzing-patient-data---1" class="slide level2">
+<h1>Analyzing Patient Data - 1</h1>
+<ul>
+<li>Explain what a library is, and what libraries are used for.</li>
+<li>Load a Python library and use the things it contains.</li>
+<li>Read tabular data from a file into a program.</li>
+<li>Assign values to variables.</li>
+<li>Select individual values and subsections from data.</li>
+</ul>
+</section>
+<section id="code-reminders" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> numpy
+numpy.loadtxt(fname=..., delimiter=...)
+
+weight_kg = <span class="dv">5</span>          weight_lb = <span class="fl">2.2</span> * weight_kg
+<span class="dt">print</span> weight_kg
+
+<span class="dt">type</span>(data)                data.shape
+
+data[<span class="dv">0</span>, <span class="dv">0</span>]                 data[<span class="dv">0</span>:<span class="dv">1</span>, <span class="dv">0</span>:<span class="dv">1</span>]
+data[<span class="dv">0</span>:<span class="dv">10</span>:<span class="dv">2</span>, <span class="dv">1</span>]         data[:<span class="dv">3</span>, <span class="dv">36</span>:]</code></pre>
+</section>
+<section id="analyzing-patient-data---2" class="slide level2">
+<h1>Analyzing Patient Data - 2</h1>
+<ul>
+<li>Perform operations on arrays of data.</li>
+<li>Display simple graphs.</li>
+</ul>
+</section>
+<section id="code-reminders-1" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python">data.mean()    data.std()    data.mean(axis=<span class="dv">0</span>)
+
+%matplotlib inline
+<span class="ch">from</span> matplotlib <span class="ch">import</span> pyplot
+pyplot.imshow(data)         pyplot.show()
+pyplot.plot(ave_inflammation)
+
+<span class="ch">import</span> matplotlib.pyplot <span class="ch">as</span> plt
+plt.subplot(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">1</span>)
+plt.ylabel(<span class="st">&#39;average&#39;</span>)       plt.show()</code></pre>
+</section>
+<section id="exercise" class="slide level2">
+<h1>Exercise</h1>
+<p>Create a single plot showing:</p>
+<ol type="1">
+<li>the mean for each day</li>
+<li>the mean + 1 standard deviation for each day</li>
+<li>the mean - 1 standard deviation for each day</li>
+</ol>
+</section>
+<section id="creating-functions---1" class="slide level2">
+<h1>Creating Functions - 1</h1>
+<ul>
+<li>Define a function that takes parameters.</li>
+<li>Return a value from a function.</li>
+<li>Test and debug a function.</li>
+</ul>
+</section>
+<section id="code-reminders-2" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> fahr_to_kelvin(temp):
+     <span class="kw">return</span> ((temp - <span class="dv">32</span>) * (<span class="dv">5</span>/<span class="dv">9</span>)) + <span class="fl">273.15</span>
+
+<span class="ch">from</span> __future__ <span class="ch">import</span> division
+
+<span class="kw">def</span> fahr_to_celsius(temp):
+    temp_k = fahr_to_kelvin(temp)
+    result = kelvin_to_celsius(temp_k)
+    <span class="kw">return</span> result</code></pre>
+</section>
+<section id="creating-functions-part-2" class="slide level2">
+<h1>Creating Functions Part 2</h1>
+<ul>
+<li>Explain the scope of a variable and the idea of encapsulation.</li>
+</ul>
+<figure>
+<img src="fig/python-call-stack-05.png" alt="Python Call Stack" /><figcaption>Python Call Stack</figcaption>
+</figure>
+</section>
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- footer -->
+    <p class="deck-status deck-progress-10"> <span class="deck-status-current"></span> / <span class="deck-status-total"></span> − <span class="var-title">will be replaced by the title</span></p>
+    <!-- progress bar -->
+    <div class="progress-bar" data-progress-size=":spe.bottom(0, 1) ; left: slide.left+'px' ; height: designRatio+'px'" data-progress="width: detail.p * slide.width" style="position: absolute;"> </div>
+
+    <!-- End extension snippets. -->
+  </div>
+
+</body>
+</html>
