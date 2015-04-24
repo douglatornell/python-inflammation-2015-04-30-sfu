@@ -1,5 +1,5 @@
-python-novice-inflammation
-==========================
+python-inflammation
+===================
 
 Introduction to Python using inflammation data for the 2015-04-30 SFU Software Carpentry Python Workshop.
 
