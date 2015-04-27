@@ -117,14 +117,81 @@ plt.ylabel(<span class="st">&#39;average&#39;</span>)       plt.show()</code></p
     result = kelvin_to_celsius(temp_k)
     <span class="kw">return</span> result</code></pre>
 </section>
-<section id="creating-functions-part-2" class="slide level2">
-<h1>Creating Functions Part 2</h1>
+<section id="creating-functions---2" class="slide level2">
+<h1>Creating Functions - 2</h1>
 <ul>
 <li>Explain the scope of a variable and the idea of encapsulation.</li>
 </ul>
 <figure>
-<img src="fig/python-call-stack-05.png" alt="Python Call Stack" /><figcaption>Python Call Stack</figcaption>
+<img src="fig/python-call-stack-05.svg" alt="Python Call Stack" /><figcaption>Python Call Stack</figcaption>
 </figure>
+</section>
+<section id="creating-functions---3" class="slide level2">
+<h1>Creating Functions - 3</h1>
+<ul>
+<li>Test and debug a function.</li>
+<li>Explain why we should divide programs into small, single-purpose functions.</li>
+</ul>
+</section>
+<section id="code-reminders-3" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> centre(data, desired):
+       <span class="kw">return</span> (data - data.mean()) + desired
+
+z = numpy.zeros((<span class="dv">2</span>, <span class="dv">2</span>))
+<span class="dt">print</span> centre(z, <span class="dv">3</span>)
+<span class="dt">print</span> data.std() - centred.std()
+
+<span class="kw">def</span> centre(data, desired):
+       <span class="co">&quot;&quot;&quot;Return a new array containing the</span>
+<span class="co">       original data centered around the desired</span>
+<span class="co">       value.&quot;&quot;&quot;</span></code></pre>
+</section>
+<section id="exercise-1" class="slide level2">
+<h1>Exercise</h1>
+<p>Write a function called <code>analyze</code> that takes a filename as a parameter and displays the three graphs produced in the previous lesson, i.e., <code>analyze('inflammation-01.csv')</code> should produce the graphs already shown, while <code>analyze('inflammation-02.csv')</code> should produce corresponding graphs for the second data set. Be sure to give your function a docstring.</p>
+<p>Hint: a function can just “do” something. It doesn’t necessarily need to return anything.</p>
+</section>
+<section id="creating-functions---4" class="slide level2">
+<h1>Creating Functions - 4</h1>
+<ul>
+<li>Set default values for function parameters.</li>
+</ul>
+</section>
+<section id="code-reminders-4" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> center(data, desired=<span class="dv">0</span>):
+
+<span class="kw">def</span> display(a=<span class="dv">1</span>, b=<span class="dv">2</span>, c=<span class="dv">3</span>):
+       <span class="dt">print</span> <span class="st">&#39;a:&#39;</span>, a, <span class="st">&#39;b:&#39;</span>, b, <span class="st">&#39;c:&#39;</span>, c
+
+<span class="dt">print</span> <span class="st">&#39;no parameters:&#39;</span>, display()
+<span class="dt">print</span> <span class="st">&#39;one parameter:&#39;</span>, display(<span class="dv">55</span>)
+<span class="dt">print</span> <span class="st">&#39;two parameters:&#39;</span>, display(<span class="dv">55</span>, c=<span class="dv">66</span>)
+
+<span class="dt">help</span>(numpy.loadtxt)</code></pre>
+</section>
+<section id="analyzing-multiple-data-sets---1" class="slide level2">
+<h1>Analyzing Multiple Data Sets - 1</h1>
+<p>You should have a working function <code>analyze</code>. If not, its at the top of <a href="http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb">http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb</a></p>
+<ul>
+<li>Explain what a for loop does.</li>
+<li>Correctly write for loops to repeat simple calculations.</li>
+</ul>
+</section>
+<section id="code-reminders-5" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> print_characters(element):
+       <span class="dt">print</span> element[<span class="dv">0</span>]
+       <span class="dt">print</span> element[<span class="dv">1</span>]
+       <span class="dt">print</span> element[<span class="dv">2</span>]
+
+print_characters(<span class="st">&#39;tin&#39;</span>)
+print_characters(<span class="st">&#39;hg&#39;</span>)
+
+<span class="kw">def</span> print_characters(element):
+      <span class="kw">for</span> char in element:
+           <span class="dt">print</span> char</code></pre>
 </section>
     <!-- End slides. -->
 

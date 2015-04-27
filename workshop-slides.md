@@ -115,8 +115,84 @@ def fahr_to_celsius(temp):
 ~~~
 
 
-## Creating Functions Part 2
+## Creating Functions - 2
 
 * Explain the scope of a variable and the idea of encapsulation.
 
-![Python Call Stack](fig/python-call-stack-05.png)
+![Python Call Stack](fig/python-call-stack-05.svg)
+
+
+## Creating Functions - 3
+
+* Test and debug a function.
+* Explain why we should divide programs into small, single-purpose functions.
+
+
+## Code Reminders
+
+~~~ {.python}
+def centre(data, desired):
+       return (data - data.mean()) + desired
+
+z = numpy.zeros((2, 2))
+print centre(z, 3)
+print data.std() - centred.std()
+
+def centre(data, desired):
+       """Return a new array containing the
+       original data centered around the desired
+       value."""
+~~~
+
+
+##  Exercise
+
+Write a function called `analyze` that takes a filename as a parameter and displays the three graphs produced in the previous lesson, i.e., `analyze('inflammation-01.csv')` should produce the graphs already shown, while `analyze('inflammation-02.csv')` should produce corresponding graphs for the second data set. Be sure to give your function a docstring.
+
+Hint: a function can just "do" something.  It doesn't necessarily need to return anything.
+
+## Creating Functions - 4
+
+* Set default values for function parameters.
+
+
+## Code Reminders
+
+~~~ {.python}
+def center(data, desired=0):
+
+def display(a=1, b=2, c=3):
+       print 'a:', a, 'b:', b, 'c:', c
+
+print 'no parameters:', display()
+print 'one parameter:', display(55)
+print 'two parameters:', display(55, c=66)
+
+help(numpy.loadtxt)
+~~~
+
+
+## Analyzing Multiple Data Sets - 1
+
+You should have a working function `analyze`.
+If not, its at the top of [http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb)
+
+* Explain what a for loop does.
+* Correctly write for loops to repeat simple calculations.
+
+
+## Code Reminders
+
+~~~ {.python}
+def print_characters(element):
+       print element[0]
+       print element[1]
+       print element[2]
+
+print_characters('tin')
+print_characters('hg')
+
+def print_characters(element):
+      for char in element:
+           print char
+~~~
