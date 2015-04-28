@@ -196,3 +196,109 @@ def print_characters(element):
       for char in element:
            print char
 ~~~
+
+
+## Analyzing Multiple Data Sets - 2
+
+* Trace changes to a loop variable as the loop runs.
+* Trace changes to other variables as they are updated by a for loop.
+
+
+## Code Reminders
+
+~~~ {.python}
+length = 0
+for vowel in 'aeiou':
+    length = length + 1
+print 'There are', length, 'vowels'
+
+len('aeiou')
+
+letter = 'z'
+for letter in 'abc':
+    print letter
+print 'after the loop, letter is', letter
+~~~
+
+
+## Analyzing Multiple Data Sets - 3
+
+* Explain what a list is.
+* Create and index lists of simple values.
+
+
+## Code Reminders
+
+~~~ {.python}
+odds = [1, 3, 5, 7]
+odds[0], odds[-1]
+for number in odds:
+
+names = ['Newton', 'Darwig', 'Turing']
+names[1] = 'Darwin'
+
+name = 'Darwig'
+name[5] = 'n'
+
+odds.append[9]
+del odds[0]
+odds.reverse()
+~~~
+
+
+## Exercise
+
+Write a function called `total` that calculates the sum of the values in a list.
+
+(Python has a built-in function called `sum` that does this for you.
+Please don't use it for this exercise.)
+
+
+## Analyzing Multiple Data Sets - 4
+
+* Use a library function to get a list of filenames that match a simple wildcard pattern.
+* Use a for loop to process multiple files.
+
+
+## Code Reminders
+
+~~~ {.python}
+import glob
+print glob.glob('*.ipynb')
+
+filenames = glob.glob('*.csv')
+filenames = filenames[0:3]
+for f in filenames:
+      print f
+      analyze(f)
+~~~
+
+
+## Conditionals -- Making Choices
+
+* Write conditional statements including `if`, `elif`, and `else` branches.
+* Correctly evaluate expressions containing `and` and `or`.
+* Correctly write and interpret code containing nested loops and conditionals.
+
+
+## Code Reminders
+
+~~~ {.python}
+numpy.empty()
+numpy.empty_like()
+
++=, -=, *=, /=
+
+enumerate()
+
+if ... elif ... else
+
+==, !=, <, <=, >, >=
+and, or, not
+~~~
+
+
+## Code Reminders
+
+* Non-printing characters; e.g. `\n`
+* Line continuations in code

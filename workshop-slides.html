@@ -193,6 +193,102 @@ print_characters(<span class="st">&#39;hg&#39;</span>)
       <span class="kw">for</span> char in element:
            <span class="dt">print</span> char</code></pre>
 </section>
+<section id="analyzing-multiple-data-sets---2" class="slide level2">
+<h1>Analyzing Multiple Data Sets - 2</h1>
+<ul>
+<li>Trace changes to a loop variable as the loop runs.</li>
+<li>Trace changes to other variables as they are updated by a for loop.</li>
+</ul>
+</section>
+<section id="code-reminders-6" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python">length = <span class="dv">0</span>
+<span class="kw">for</span> vowel in <span class="st">&#39;aeiou&#39;</span>:
+    length = length + <span class="dv">1</span>
+<span class="dt">print</span> <span class="st">&#39;There are&#39;</span>, length, <span class="st">&#39;vowels&#39;</span>
+
+<span class="dt">len</span>(<span class="st">&#39;aeiou&#39;</span>)
+
+letter = <span class="st">&#39;z&#39;</span>
+<span class="kw">for</span> letter in <span class="st">&#39;abc&#39;</span>:
+    <span class="dt">print</span> letter
+<span class="dt">print</span> <span class="st">&#39;after the loop, letter is&#39;</span>, letter</code></pre>
+</section>
+<section id="analyzing-multiple-data-sets---3" class="slide level2">
+<h1>Analyzing Multiple Data Sets - 3</h1>
+<ul>
+<li>Explain what a list is.</li>
+<li>Create and index lists of simple values.</li>
+</ul>
+</section>
+<section id="code-reminders-7" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python">odds = [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]
+odds[<span class="dv">0</span>], odds[-<span class="dv">1</span>]
+<span class="kw">for</span> number in odds:
+
+names = [<span class="st">&#39;Newton&#39;</span>, <span class="st">&#39;Darwig&#39;</span>, <span class="st">&#39;Turing&#39;</span>]
+names[<span class="dv">1</span>] = <span class="st">&#39;Darwin&#39;</span>
+
+name = <span class="st">&#39;Darwig&#39;</span>
+name[<span class="dv">5</span>] = <span class="st">&#39;n&#39;</span>
+
+odds.append[<span class="dv">9</span>]
+<span class="kw">del</span> odds[<span class="dv">0</span>]
+odds.reverse()</code></pre>
+</section>
+<section id="exercise-2" class="slide level2">
+<h1>Exercise</h1>
+<p>Write a function called <code>total</code> that calculates the sum of the values in a list.</p>
+<p>(Python has a built-in function called <code>sum</code> that does this for you. Please don’t use it for this exercise.)</p>
+</section>
+<section id="analyzing-multiple-data-sets---4" class="slide level2">
+<h1>Analyzing Multiple Data Sets - 4</h1>
+<ul>
+<li>Use a library function to get a list of filenames that match a simple wildcard pattern.</li>
+<li>Use a for loop to process multiple files.</li>
+</ul>
+</section>
+<section id="code-reminders-8" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> glob
+<span class="dt">print</span> glob.glob(<span class="st">&#39;*.ipynb&#39;</span>)
+
+filenames = glob.glob(<span class="st">&#39;*.csv&#39;</span>)
+filenames = filenames[<span class="dv">0</span>:<span class="dv">3</span>]
+<span class="kw">for</span> f in filenames:
+      <span class="dt">print</span> f
+      analyze(f)</code></pre>
+</section>
+<section id="conditionals-making-choices" class="slide level2">
+<h1>Conditionals – Making Choices</h1>
+<ul>
+<li>Write conditional statements including <code>if</code>, <code>elif</code>, and <code>else</code> branches.</li>
+<li>Correctly evaluate expressions containing <code>and</code> and <code>or</code>.</li>
+<li>Correctly write and interpret code containing nested loops and conditionals.</li>
+</ul>
+</section>
+<section id="code-reminders-9" class="slide level2">
+<h1>Code Reminders</h1>
+<pre class="sourceCode python"><code class="sourceCode python">numpy.empty()
+numpy.empty_like()
+
++=, -=, *=, /=
+
+<span class="dt">enumerate</span>()
+
+<span class="kw">if</span> ... <span class="kw">elif</span> ... <span class="kw">else</span>
+
+==, !=, &lt;, &lt;=, &gt;, &gt;=
+and, or, not</code></pre>
+</section>
+<section id="code-reminders-10" class="slide level2">
+<h1>Code Reminders</h1>
+<ul>
+<li>Non-printing characters; e.g. <code>\n</code></li>
+<li>Line continuations in code</li>
+</ul>
+</section>
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
