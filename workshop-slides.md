@@ -175,7 +175,7 @@ help(numpy.loadtxt)
 ## Analyzing Multiple Data Sets - 1
 
 You should have a working function `analyze`.
-If not, its at the top of [http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb)
+If not, it's at the top of [http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/03-loop.ipynb)
 
 * Explain what a for loop does.
 * Correctly write for loops to repeat simple calculations.
