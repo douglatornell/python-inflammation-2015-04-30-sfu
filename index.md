@@ -40,6 +40,10 @@ and to use that language *well*.
 
 * [Workshop Slides](workshop-slides.html)
 
+* [Summary of Key Points](key-points.html)
+
+* [Glossary](gloss.html)
+
 
 ## Resources
 
