@@ -124,7 +124,7 @@ def fahr_to_celsius(temp):
 
 ## Creating Functions - 3
 
-* Test and debug a function.
+* Test and document a function.
 * Explain why we should divide programs into small, single-purpose functions.
 
 
