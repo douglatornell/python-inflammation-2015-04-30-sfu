@@ -31,7 +31,7 @@ and to use that language *well*.
 
 * [Motivation](motivation.html)
 
-* IPython Notebooks:
+* IPython Notebooks (the textbook):
 
     1.  [Analyzing Patient Data](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/01-numpy.ipynb)
     2.  [Creating Functions](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/02-func.ipynb)
@@ -43,6 +43,11 @@ and to use that language *well*.
 * [Summary of Key Points](key-points.html)
 
 * [Glossary](gloss.html)
+
+* IPython Notebooks Live-coded During the Workshop:
+
+  * [NumPyArrays](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/NumPyArrays.ipynb)
+  * [Functions](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/Functions.ipynb)
 
 
 ## Resources
