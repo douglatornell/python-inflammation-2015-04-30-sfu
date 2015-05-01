@@ -46,8 +46,8 @@ and to use that language *well*.
 
 * IPython Notebooks Live-coded During the Workshop:
 
-    * [NumPyArrays](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/NumPyArrays.ipynb)
-    * [Functions](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/Functions.ipynb)
+    1. [NumPyArrays](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/NumPyArrays.ipynb)
+    2. [Functions](http://nbviewer.ipython.org/github/douglatornell/python-inflammation-2015-04-30-sfu/blob/gh-pages/Functions.ipynb)
 
 
 ## Resources
